@@ -23,9 +23,7 @@ RUN cp credentials.toml ~/.streamlit/credentials.toml
 # Expose port
 EXPOSE 8501
 
-# Environment variable for API key
-ENV OPENROUTER_API_KEY="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"
-
 # Run the app
 ENTRYPOINT ["streamlit", "run"]
 CMD ["App.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
